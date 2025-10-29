@@ -1,0 +1,9 @@
+[
+  {
+    "idSalida": 1,
+    "idTren": 1,
+    "idRuta": 1,
+    "fechaHora": "2025-10-28 08:00:00",
+    "estado": "PROGRAMADA"
+  }
+]

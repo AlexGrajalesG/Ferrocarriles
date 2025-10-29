@@ -1,0 +1,429 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <title>Dashboard Administrador</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1"><i class="bi bi-shield-lock"></i> Panel de Administración</span>
+          <span class="text-white">Sistema Ferroviario</span>
+        </div>
+      </nav>
+
+      <div class="container mt-4 fade-in">
+        <!-- Bienvenida y resumen general -->
+        <div class="row mb-4">
+          <div class="col-md-12">
+            <div class="card stat-card mb-3">
+              <div class="card-header">
+                <i class="bi bi-person-badge"></i> Bienvenido, Administrador
+              </div>
+              <div class="card-body">
+                <p class="lead">Gestiona todos los recursos del sistema ferroviario de forma rápida y segura.</p>
+                <div class="row text-center">
+                  <div class="col-md-3 mb-2">
+                    <div class="badge bg-success">Estaciones</div>
+                    <div class="fw-bold">5</div>
+                  </div>
+                  <div class="col-md-3 mb-2">
+                    <div class="badge bg-info">Trenes</div>
+                    <div class="fw-bold">3</div>
+                  </div>
+                  <div class="col-md-3 mb-2">
+                    <div class="badge bg-secondary">Vagones</div>
+                    <div class="fw-bold">8</div>
+                  </div>
+                  <div class="col-md-3 mb-2">
+                    <div class="badge bg-warning">Rutas</div>
+                    <div class="fw-bold">2</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Estaciones -->
+        <div class="row g-4 mb-2">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><i class="bi bi-building"></i> Estaciones</div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover" id="tablaEstaciones">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Departamento</th>
+                        <th>Municipio</th>
+                        <th>Capacidad Trenes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Las estaciones se cargarán aquí dinámicamente -->
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-success mt-2"><i class="bi bi-plus-circle"></i> Agregar Estación</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trenes -->
+        <div class="row g-4 mb-2">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><i class="bi bi-train-front"></i> Trenes</div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover" id="tablaTrenes">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Capacidad</th>
+                        <th>Vagones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Los trenes se cargarán aquí dinámicamente -->
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-success mt-2"><i class="bi bi-plus-circle"></i> Agregar Tren</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vagones debajo de trenes -->
+        <div class="row g-4 mb-2">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><i class="bi bi-box"></i> Vagones</div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover" id="tablaVagones">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Disponibilidad</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Los vagones se cargarán aquí dinámicamente -->
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-success mt-2"><i class="bi bi-plus-circle"></i> Agregar Vagón</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Rutas -->
+        <div class="row g-4 mb-2">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><i class="bi bi-signpost"></i> Rutas</div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover" id="tablaRutas">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Distancia (km)</th>
+                        <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Las rutas se cargarán aquí dinámicamente -->
+                    </tbody>
+                  </table>
+                </div>
+                <button class="btn btn-success mt-2"><i class="bi bi-plus-circle"></i> Agregar Ruta</button>
+              </div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  fetch('/api/rutas')
+                    .then(response => response.json())
+                    .then(data => {
+                      const tbody = document.querySelector('#tablaRutas tbody');
+                      tbody.innerHTML = '';
+                      if (Array.isArray(data)) {
+                        data.forEach(ruta => {
+                          const estado = ruta.estado ? '<span class="badge bg-success">Activa</span>' : '<span class="badge bg-danger">Inactiva</span>';
+                          const tr = `<tr>
+                            <td>${ruta.idRuta}</td>
+                            <td>${ruta.nombre}</td>
+                            <td>${ruta.origen || ruta.estacionOrigenId}</td>
+                            <td>${ruta.destino || ruta.estacionDestinoId}</td>
+                            <td>${ruta.distancia}</td>
+                            <td>${estado}</td>
+                          </tr>`;
+                          tbody.innerHTML += tr;
+                        });
+                      } else {
+                        tbody.innerHTML = '<tr><td colspan="6">No hay rutas registradas.</td></tr>';
+                      }
+                    })
+                    .catch(() => {
+                      const tbody = document.querySelector('#tablaRutas tbody');
+                      tbody.innerHTML = '<tr><td colspan="6">Error al cargar rutas.</td></tr>';
+                    });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buscar usuario y ver boletos -->
+        <div class="row g-4 mb-2">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><i class="bi bi-search"></i> Buscar Usuario y Boletos</div>
+              <div class="card-body">
+                <form class="row g-2 align-items-end mb-3">
+                  <div class="col-md-8">
+                    <label for="buscarUsuario" class="form-label">Nombre o ID de usuario</label>
+                    <input type="text" class="form-control" id="buscarUsuario" placeholder="Ej: Diego Rojas o 1">
+                  </div>
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-primary w-100"><i class="bi bi-search"></i> Buscar</button>
+                  </div>
+                </form>
+                <div class="table-responsive">
+                  <table class="table table-hover" id="tablaBoletos">
+                    <thead>
+                      <tr>
+                        <th>ID Boleto</th>
+                        <th>Fecha Compra</th>
+                        <th>Fecha Salida</th>
+                        <th>Asiento</th>
+                        <th>Tren</th>
+                        <th>Ruta</th>
+                        <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Los boletos se cargarán aquí dinámicamente -->
+                    </tbody>
+                  </table>
+                </div>
+    <script>
+      // Cargar estaciones
+      fetch('/api/estaciones')
+        .then(r => r.json())
+        .then(data => {
+          const tbody = document.querySelector('#tablaEstaciones tbody');
+          tbody.innerHTML = '';
+          if (Array.isArray(data)) {
+            data.forEach(est => {
+              tbody.innerHTML += `<tr>
+                <td>${est.idEstacion}</td>
+                <td>${est.Nombre}</td>
+                <td>${est.Departamento}</td>
+                <td>${est.Municipio}</td>
+                <td>${est.capacidadTrenes}</td>
+              </tr>`;
+            });
+          } else {
+            tbody.innerHTML = '<tr><td colspan="5">No hay estaciones registradas.</td></tr>';
+          }
+        });
+
+      // Cargar trenes y sus vagones
+      fetch('/api/trenes')
+        .then(r => r.json())
+        .then(data => {
+          const tbody = document.querySelector('#tablaTrenes tbody');
+          tbody.innerHTML = '';
+          if (Array.isArray(data)) {
+            data.forEach(tren => {
+              const vagones = Array.isArray(tren.listaVagones) ? tren.listaVagones.join(', ') : '';
+              tbody.innerHTML += `<tr>
+                <td>${tren.idTren}</td>
+                <td>${tren.nombre}</td>
+                <td>${tren.capacidad}</td>
+                <td>${vagones}</td>
+              </tr>`;
+            });
+          } else {
+            tbody.innerHTML = '<tr><td colspan="4">No hay trenes registrados.</td></tr>';
+          }
+        });
+
+      // Cargar vagones
+      fetch('/api/vagones')
+        .then(r => r.json())
+        .then(data => {
+          const tbody = document.querySelector('#tablaVagones tbody');
+          tbody.innerHTML = '';
+          if (Array.isArray(data)) {
+            data.forEach(vagon => {
+              const disponibilidad = vagon.disponibilidad ? '<span class="badge bg-success">Disponible</span>' : '<span class="badge bg-danger">Ocupado</span>';
+              tbody.innerHTML += `<tr>
+                <td>${vagon.idVagon}</td>
+                <td>${vagon.tipo}</td>
+                <td>${disponibilidad}</td>
+              </tr>`;
+            });
+          } else {
+            tbody.innerHTML = '<tr><td colspan="3">No hay vagones registrados.</td></tr>';
+          }
+        });
+
+      // Cargar boletos (por usuario buscado)
+      document.querySelector('button.btn-primary.w-100').addEventListener('click', function() {
+        const usuario = document.getElementById('buscarUsuario').value;
+        fetch(`/api/boletos?usuario=${encodeURIComponent(usuario)}`)
+          .then(r => r.json())
+          .then(data => {
+            const tbody = document.querySelector('#tablaBoletos tbody');
+            tbody.innerHTML = '';
+            if (Array.isArray(data)) {
+              data.forEach(boleto => {
+                const estado = boleto.estado ? '<span class="badge bg-success">Activo</span>' : '<span class="badge bg-danger">Cancelado</span>';
+                tbody.innerHTML += `<tr>
+                  <td>${boleto.idBoleto}</td>
+                  <td>${boleto.fechaCompra}</td>
+                  <td>${boleto.fechaSalida}</td>
+                  <td>${boleto.asiento}</td>
+                  <td>${boleto.trenId}</td>
+                  <td>${boleto.rutaId}</td>
+                  <td>${estado}</td>
+                </tr>`;
+              });
+            } else {
+              tbody.innerHTML = '<tr><td colspan="7">No hay boletos para este usuario.</td></tr>';
+            }
+          });
+      });
+    </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ruta más corta (grafo) -->
+        <div class="row g-4 mb-2">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><i class="bi bi-diagram-3"></i> Ruta más corta entre estaciones</div>
+              <div class="card-body">
+                <form class="row g-2 align-items-end mb-3">
+                  <div class="col-md-5">
+                    <label for="origen" class="form-label">Estación origen</label>
+                    <input type="text" class="form-control" id="origen" placeholder="Ej: Central">
+                  </div>
+                  <div class="col-md-5">
+                    <label for="destino" class="form-label">Estación destino</label>
+                    <input type="text" class="form-control" id="destino" placeholder="Ej: Norte">
+                  </div>
+                  <div class="col-md-2">
+                    <button type="button" class="btn btn-primary w-100"><i class="bi bi-geo-alt"></i> Calcular</button>
+                  </div>
+                </form>
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Ruta</th>
+                        <th>Distancia total (km)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td id="ruta-corta">Central → Norte → Oriente</td>
+                        <td id="distancia-corta">150.5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mt-3">
+                  <img src="https://cdn.jsdelivr.net/gh/DiegoRojas018/ferrocarriles-grafo-demo/grafo-demo.png" alt="Visualización de grafo" class="img-fluid rounded shadow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </html>
+                    <td>
+                      <button class="btn btn-primary btn-action"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-danger btn-action"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="btn btn-success mt-2"><i class="bi bi-plus-circle"></i> Agregar Tren</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header"><i class="bi bi-box"></i> Vagones</div>
+          <div class="card-body">
+            <p>Administra los vagones y su disponibilidad.</p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Tipo</th>
+                    <th>Disponibilidad</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Pasajeros</td>
+                    <td><span class="badge bg-success">Disponible</span></td>
+                    <td>
+                      <button class="btn btn-primary btn-action"><i class="bi bi-pencil"></i></button>
+                      <button class="btn btn-danger btn-action"><i class="bi bi-trash"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="btn btn-success mt-2"><i class="bi bi-plus-circle"></i> Agregar Vagón</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-2">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header"><i class="bi bi-bar-chart"></i> Reportes y Estadísticas</div>
+          <div class="card-body">
+            <p>Visualiza reportes generales y exporta datos del sistema.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-dark"><i class="bi bi-file-earmark-bar-graph"></i> Ver Reportes</button>
+              <button class="btn btn-dark"><i class="bi bi-graph-up"></i> Estadísticas</button>
+              <button class="btn btn-dark"><i class="bi bi-download"></i> Exportar Datos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {
+    "idTren": 1,
+    "nombre": "Tren Expreso",
+    "tipo": "Transiberiano",
+    "capacidadCarga": 0,
+    "kilometraje": 1200.5,
+    "listaVagones": [1, 2, 3],
+    "estado": true,
+    "idEstacionActual": 0
+  },
+  {
+    "idTren": 2,
+    "nombre": "Carabela Norte",
+    "tipo": "Carabela",
+    "capacidadCarga": 5000,
+    "kilometraje": 800.0,
+    "listaVagones": [4, 5],
+    "estado": true,
+    "idEstacionActual": 2
+  }
+]

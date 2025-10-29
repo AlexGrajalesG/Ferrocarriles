@@ -1,0 +1,32 @@
+[
+  {
+    "idUsuario": 1,
+    "nombre": "Administrador Uno",
+    "email": "admin1@correo.com",
+  "passwordHash": "25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7",
+    "rol": "ADMIN",
+    "userName": "admin1",
+    "activo": true,
+    "tipoUsuario": "Administrador"
+  },
+  {
+    "idUsuario": 2,
+    "nombre": "Operador Uno",
+    "email": "operador1@correo.com",
+  "passwordHash": "27efbda024c402f6b212509eeba68215783b0c2455ef01e27dddfa8fc6525a65",
+    "rol": "OPERADOR",
+    "userName": "operador1",
+    "activo": true,
+    "tipoUsuario": "Operador"
+  },
+  {
+    "idUsuario": 3,
+    "nombre": "Pasajero Uno",
+    "email": "pasajero1@correo.com",
+    "passwordHash": "15dbb580eafc3c2df05f27b642ea7b248d910e963c7a775d501cb48be73e24b9",
+    "rol": "PASAJERO",
+    "userName": "pasajero1",
+    "activo": true,
+    "tipoUsuario": "Pasajero"
+  }
+]

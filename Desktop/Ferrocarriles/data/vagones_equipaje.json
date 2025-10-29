@@ -1,0 +1,11 @@
+[
+  {
+    "idVagon": 10,
+    "tipo": "Equipaje",
+    "maletas": [
+      { "idPasajero": 101, "peso": 80.0 },
+      { "idPasajero": 102, "peso": 90.0 }
+    ],
+    "disponibilidad": true
+  }
+]

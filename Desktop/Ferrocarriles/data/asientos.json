@@ -1,0 +1,351 @@
+[ {
+  "idAsiento" : 1,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T1",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 2,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T2",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 3,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T3",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 4,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T4",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 5,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T5",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 6,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T6",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 7,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T7",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 8,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T8",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 9,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T9",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 10,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T10",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 11,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T11",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 12,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T12",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 13,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T13",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 14,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T14",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 15,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T15",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 16,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T16",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 17,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T17",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 18,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T18",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 19,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T19",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 20,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T20",
+  "idVagon" : 1,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 21,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T1",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 22,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T2",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 23,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T3",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 24,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T4",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 25,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T5",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 26,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T6",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 27,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T7",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 28,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T8",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 29,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T9",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 30,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T10",
+  "idVagon" : 2,
+  "nombre" : null,
+  "clase" : "Ejecutivo"
+}, {
+  "idAsiento" : 31,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T1",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 32,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T2",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 33,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T3",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 34,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T4",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 35,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T5",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 36,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T6",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 37,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T7",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 38,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T8",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 39,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T9",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 40,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T10",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 41,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T11",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 42,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T12",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 43,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T13",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 44,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T14",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 45,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T15",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 46,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T16",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 47,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T17",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 48,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T18",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 49,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T19",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+}, {
+  "idAsiento" : 50,
+  "disponibilidad" : true,
+  "numeroAsiento" : "T20",
+  "idVagon" : 3,
+  "nombre" : null,
+  "clase" : "Turista"
+} ]

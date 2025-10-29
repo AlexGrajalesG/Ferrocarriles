@@ -1,0 +1,218 @@
+[
+  {
+    "idRuta": 1,
+    "nombre": "Bucaramanga/Bogota central",
+    "distancia": 30,
+    "estacion1Id": 2,
+    "estacion2Id": 1,
+    "estado": true
+  },
+    {
+        "idRuta": 2,
+        "nombre": "Bogota central/Medellin",
+        "distancia": 40,
+        "estacion1Id": 1,
+        "estacion2Id": 3,
+        "estado": true
+    },
+    {
+        "idRuta": 3,
+        "nombre": "Bogota/Cali",
+        "distancia": 50,
+        "estacion1Id": 1,
+        "estacion2Id": 4,
+        "estado": true
+    },
+    {
+        "idRuta": 4,
+        "nombre": "Bogota/Cartagena",
+        "distancia": 60,
+        "estacion1Id": 1,
+        "estacion2Id": 6,
+        "estado": true
+    },
+    {
+        "idRuta": 5,
+        "nombre": "Medellin/Bucaramanga",
+        "distancia": 40,
+        "estacion1Id": 3,
+        "estacion2Id": 1,
+        "estado": true
+    },
+    {
+        "idRuta": 6,
+        "nombre": "Medellin/Manizales",
+        "distancia": 80,
+        "estacion1Id": 3,
+        "estacion2Id": 9,
+        "estado": true
+    },
+    {
+        "idRuta": 7,
+        "nombre": "Medellin/Armenia",
+        "distancia": 120,
+        "estacion1Id": 3,
+        "estacion2Id": 10,
+        "estado": true
+    },
+    {
+        "idRuta": 8,
+        "nombre": "Medellin/Cucuta",
+        "distancia": 100,
+        "estacion1Id": 3,
+        "estacion2Id": 11,
+        "estado": true
+    },
+    {
+        "idRuta": 9,
+        "nombre": "Medellin/Ibague",
+        "distancia": 130,
+        "estacion1Id": 3,
+        "estacion2Id": 12,
+        "estado": true
+    },
+    {
+        "idRuta": 10,
+        "nombre": "Medellin/Villavicencio",
+        "distancia": 120,
+        "estacion1Id": 3,
+        "estacion2Id": 13,
+        "estado": true
+    },
+    {
+        "idRuta": 11,
+        "nombre": "Cali/Bogota central",
+        "distancia": 50,
+        "estacion1Id": 4,
+        "estacion2Id": 1,
+        "estado": true
+    },
+    {
+        "idRuta": 12,
+        "nombre": "Cali/Barranquilla",
+        "distancia": 20,
+        "estacion1Id": 4,
+        "estacion2Id": 5,
+        "estado": true
+    },
+        {
+        "idRuta": 13,
+        "nombre": "Barranquilla/Cali",
+        "distancia": 20,
+        "estacion1Id": 5,
+        "estacion2Id": 4,
+        "estado": true
+    },
+        {
+        "idRuta": 14,
+        "nombre": "Barranquilla/Cartagena",
+        "distancia": 65,
+        "estacion1Id": 5,
+        "estacion2Id": 6,
+        "estado": true
+    },
+    {
+        "idRuta": 15,
+        "nombre": "Cartagena/Bogota central",
+        "distancia": 60,
+        "estacion1Id": 6,
+        "estacion2Id": 1,
+        "estado": true
+    },
+    {
+        "idRuta": 16,
+        "nombre": "Cartagena/Barranquilla",
+        "distancia": 65,
+        "estacion1Id": 6,
+        "estacion2Id": 5,
+        "estado": true
+    },
+    {
+        "idRuta": 17,
+        "nombre": "Cartagena/Santa Marta",
+        "distancia": 80,
+        "estacion1Id": 6,
+        "estacion2Id": 7,
+        "estado": true
+    },
+    {
+        "idRuta": 18,
+        "nombre": "Santa Marta/Cartagena",
+        "distancia": 80,
+        "estacion1Id": 7,
+        "estacion2Id": 6,
+        "estado": true
+    },
+    {
+        "idRuta": 19,
+        "nombre": "Santa Marta/Pereira",
+        "distancia": 30,
+        "estacion1Id": 7,
+        "estacion2Id": 8,
+        "estado": true
+    },
+    {
+        "idRuta": 20,
+        "nombre": "Santa Marta/Manizales",
+        "distancia": 145,
+        "estacion1Id": 7,
+        "estacion2Id": 9,
+        "estado": true
+    },
+    {
+        "idRuta": 21,
+        "nombre": "Pereira/Santa Marta",
+        "distancia": 30,
+        "estacion1Id": 8,
+        "estacion2Id": 7,
+        "estado": true
+    },
+    {
+        "idRuta": 22,
+        "nombre": "Manizales/Medellin",
+        "distancia": 80,
+        "estacion1Id": 9,
+        "estacion2Id": 3,
+        "estado": true
+    },
+    {
+        "idRuta": 23,
+        "nombre": "Manizales/Santa Marta",
+        "distancia": 145,
+        "estacion1Id": 9,
+        "estacion2Id": 7,
+        "estado": true
+    },
+    {
+        "idRuta": 24,
+        "nombre": "Armenia/Medellin",
+        "distancia": 120,
+        "estacion1Id": 10,
+        "estacion2Id": 3,
+        "estado": true
+    },
+    {
+        "idRuta": 25,
+        "nombre": "Cucuta/Medellin",
+        "distancia": 100,
+        "estacion1Id": 11,
+        "estacion2Id": 3,
+        "estado": true
+    },
+    {
+        "idRuta": 26,
+        "nombre": "Ibague/Medellin",
+        "distancia": 130,
+        "estacion1Id": 12,
+        "estacion2Id": 3,
+        "estado": true
+    },
+    {
+        "idRuta": 27,
+        "nombre": "Villavicencio/Medellin",
+        "distancia": 120,
+        "estacion1Id": 13,
+        "estacion2Id": 3,
+        "estado": true
+    }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "idEquipaje": 1,
+    "idBoleto": 1,
+    "pesoKg": 18.5,
+    "descripcion": "Maleta grande",
+    "revisado": false
+  }
+]

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Ferrocarriles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(120deg, #e3f0ff 0%, #b3d8ff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px 0 rgba(33,150,243,0.10);
+      background: #fff;
+      width: 100%;
+      max-width: 370px;
+      margin: 0 auto;
+    }
+    .card-header {
+      background: #1976d2;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      text-align: center;
+      padding: 1.2rem 1rem 0.7rem 1rem;
+    }
+    .logo-simple {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .card-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 0.2rem;
+      letter-spacing: 1px;
+    }
+    .card-header span {
+      color: #e3f0ff;
+      font-size: 1rem;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .form-control {
+      border-radius: 0.5rem;
+      border: 1px solid #b3d8ff;
+      font-size: 1rem;
+      background: #f7fbff;
+    }
+    .btn-primary {
+      background: #1976d2;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      box-shadow: 0 2px 8px 0 rgba(33,150,243,0.10);
+      transition: background 0.3s;
+    }
+    .btn-primary:hover {
+      background: #1565c0;
+    }
+    .text-muted {
+      color: #1976d2 !important;
+      font-size: 0.95rem;
+    }
+    .rol-info {
+      font-size: 0.93rem;
+      color: #1976d2;
+      margin-top: 0.5rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg">
+          <div class="card-header">
+            <span class="logo-simple"><i class="bi bi-train-front"></i></span>
+            <h4 class="card-title mb-0">Sistema Ferrocarriles</h4>
+            <span>Acceso seguro</span>
+            <div class="rol-info">Serás redirigido automáticamente al dashboard según tu rol: Administrador, Operador o Pasajero.</div>
+          </div>
+          <div class="card-body p-4">
+            <!-- Mensaje de error integrado -->
+            <!-- El backend inserta el div .alert-danger antes del <form> si hay error -->
+            <!-- Ejemplo: <div class='alert alert-danger fade show' style='margin-bottom:1rem;'>Usuario o contraseña incorrectos</div> -->
+            <form method="POST" action="/login">
+              <div id="errorMsg" style="display:none;"></div>
+              <div class="mb-3">
+                <label for="userName" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="userName" name="userName" required autocomplete="username">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" required autocomplete="current-password">
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-2">Entrar</button>
+            </form>
+            <script>
+              // Si el backend inserta el div .alert-danger, mostrarlo con animación
+              window.addEventListener('DOMContentLoaded', function() {
+                var alert = document.querySelector('.alert-danger');
+                if(alert) {
+                  alert.style.display = 'block';
+                  alert.style.opacity = 0;
+                  setTimeout(function(){ alert.style.opacity = 1; }, 100);
+                }
+              });
+            </script>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <small class="text-muted">© 2025 Ferrocarriles | Todos los derechos reservados</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

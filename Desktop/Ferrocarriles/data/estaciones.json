@@ -1,0 +1,80 @@
+[
+  {
+    "idEstacion": 1,
+    "Nodo":"A",
+    "Nombre": "Bogota Central",
+    "Municipio": "Bogota"
+  },
+    {
+        "idEstacion": 2,
+        "Nodo":"B",
+        "Nombre": "Bucaramanga",
+        "Municipio": "Bucaramanga"
+    },
+    {
+        "idEstacion": 3,
+        "Nodo":"C",
+        "Nombre": "Medellin",
+        "Municipio": "Medellin"
+    },
+    {
+        "idEstacion": 4,
+        "Nodo":"D",
+        "Nombre": "Cali",
+        "Municipio": "Cali"
+    },
+    {
+        "idEstacion": 5,
+        "Nodo":"E",
+        "Nombre": "Barranquilla",
+        "Municipio": "Barranquilla"
+    },
+    {
+        "idEstacion": 6,
+        "Nodo":"F",
+        "Nombre": "Cartagena",
+        "Municipio": "Cartagena"
+    },
+    {
+        "idEstacion": 7,
+        "Nodo":"G",
+        "Nombre": "Santa Marta",
+        "Municipio": "Santa Marta"
+    },
+    {
+        "idEstacion": 8,
+        "Nodo":"H",
+        "Nombre": "Pereira",
+        "Municipio": "Pereira"
+    },
+    {
+        "idEstacion": 9,
+        "Nodo":"I",
+        "Nombre": "Manizales",
+        "Municipio": "Manizales"
+    },
+    {
+        "idEstacion": 10,
+        "Nodo":"J",
+        "Nombre": "Armenia",
+        "Municipio": "Armenia"
+    },  
+    {
+        "idEstacion": 11,
+        "Nodo":"K",
+        "Nombre": "Cucuta",
+        "Municipio": "Cucuta"
+    },
+    {
+        "idEstacion": 12,
+        "Nodo":"L",
+        "Nombre": "Ibague",
+        "Municipio": "Ibague"
+    },
+    {
+        "idEstacion": 13,
+        "Nodo":"M",
+        "Nombre": "Villavicencio",
+        "Municipio": "Villavicencio"
+    }
+]

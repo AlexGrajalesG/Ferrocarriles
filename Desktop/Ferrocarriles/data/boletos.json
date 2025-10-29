@@ -1,0 +1,22 @@
+[
+  {
+  "idBoleto": 1,
+  "fechaCompra": "2025-10-28T15:30:00Z",
+  "fechaSalida": "2025-10-29T08:00:00Z",
+  "asiento": 2,
+  "pasajeroId": 3,
+  "trenId": 1,
+  "rutaId": -1,
+  "estacionOrigenId": 2,
+  "estacionDestinoId": 4,
+  "equipaje": [
+    {
+      "tipo": "Ligero",
+      "peso": 5
+    }
+  ],
+  "precio": 350.00,
+  "estado": true,
+  "caminoEstaciones": [2, 5, 4]
+}
+]
